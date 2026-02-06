@@ -1,0 +1,93 @@
+---
+title: "Staking Contract"
+description: "Token staking with configurable lock durations and governance weight"
+---
+
+## Overview
+
+The Staking Contract allows SHAMA token holders to stake their tokens to earn rewards and participate in governance. It supports multiple lock durations with different reward multipliers and governance weights.
+
+## Key Features
+
+- **Multiple Staking Tiers:** Flexible, Bronze, Silver, and Gold tiers
+- **Reward Multipliers:** Longer locks earn higher rewards
+- **Governance Weight:** Staked tokens grant voting power proportional to lock duration
+- **Shop Launch Rewards:** Staking rewards come from new shop token allocations
+- **Flexible Unstaking:** Can withdraw after lock period expires
+
+## Staking Tiers
+
+| Tier | Lock Duration | Reward Multiplier | Governance Weight |
+|------|-------------|-------------------|-------------------|
+| Flexible | No lock | 1.0x | 1.0x |
+| Bronze | 3 months | 1.25x | 1.25x |
+| Silver | 6 months | 1.5x | 1.5x |
+| Gold | 12 months | 2.0x | 2.0x |
+
+## How Staking Rewards Work
+
+<Info>
+Staking rewards are **not** paid from shop profits (those go to buyback-and-burn). Instead, staking rewards come from the staker allocation of each new shop setup.
+</Info>
+
+When Shop #5 launches, 5,000 SHAMA (25% of 20,000) are allocated to the staking pool. These tokens are distributed to stakers proportionally based on their staked amount and lock duration.
+
+**This means: staking rewards are tied to expansion.** More shops launching = more rewards for stakers.
+
+## Functions
+
+### Core Functions
+- `stake(uint256 amount, uint8 tier)` - Stake tokens with chosen tier
+- `unstake()` - Withdraw tokens after lock period
+- `claimRewards()` - Claim earned staking rewards
+- `getStakingInfo(address staker)` - View staking position details
+
+### View Functions
+- `calculateRewards(address staker)` - Calculate pending rewards
+- `getGovernanceWeight(address staker)` - Get voting power
+- `getTotalStaked()` - View total staked in contract
+
+<Note>
+**Coming Soon:** Detailed technical documentation, contract addresses, and ABIs will be added after contract deployment.
+</Note>
+
+## Example: Staking Comparison
+
+User A stakes 1,000 SHAMA in Flexible tier:
+- Reward multiplier: 1.0x
+- Governance weight: 1,000
+
+User B stakes 1,000 SHAMA in Gold tier (12 months):
+- Reward multiplier: 2.0x (earns 2x more rewards)
+- Governance weight: 2,000 (2x voting power)
+
+## Security
+
+- No admin withdrawal functions
+- Emergency pause function (multisig controlled)
+- Third-party audit pending
+
+## Contract Address
+
+<Warning>
+Contract not yet deployed. Address will be published here after mainnet deployment.
+</Warning>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card
+    title="Tutorial"
+    icon="book"
+    href="/tutorials/staking"
+  >
+    Learn how to stake SHAMA tokens
+  </Card>
+  <Card
+    title="Governance"
+    icon="scale-balanced"
+    href="/contracts/governance"
+  >
+    Learn about governance voting
+  </Card>
+</CardGroup>

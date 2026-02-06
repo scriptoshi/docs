@@ -1,0 +1,74 @@
+---
+title: "SHAMA Token Contract"
+description: "Standard ERC-20 with burn function and fixed supply"
+---
+
+## Overview
+
+The SHAMA Token Contract is a standard ERC-20 implementation with burn functionality. It has a fixed supply of 1,000,000 tokens minted at genesis with no ability to mint additional tokens.
+
+## Key Features
+
+- **Fixed Supply:** 1,000,000 SHAMA tokens minted at genesis
+- **Burn Function:** Tokens can be permanently burned, reducing total supply
+- **No Mint Function:** Supply can only decrease, never increase
+- **ERC-20 Standard:** Fully compatible with all ERC-20 infrastructure
+
+## Contract Specifications
+
+| Property | Value |
+|----------|-------|
+| Token Name | SHAMA |
+| Token Symbol | SHAMA |
+| Decimals | 18 |
+| Total Supply | 1,000,000 |
+| Mintable | No |
+| Burnable | Yes |
+
+## Functions
+
+### Core ERC-20 Functions
+- `transfer(address to, uint256 amount)`
+- `approve(address spender, uint256 amount)`
+- `transferFrom(address from, address to, uint256 amount)`
+- `balanceOf(address account)`
+- `allowance(address owner, address spender)`
+
+### Burn Function
+- `burn(uint256 amount)` - Allows any holder to burn their own tokens
+- Only the Buyback-and-Burn contract and token holders can call burn
+
+<Note>
+**Coming Soon:** Detailed technical documentation, contract addresses, and ABIs will be added after contract deployment.
+</Note>
+
+## Security
+
+- Third-party audit pending
+- No admin functions for minting
+- Burn address: `0x000000000000000000000000000000000000dEaD`
+
+## Contract Address
+
+<Warning>
+Contract not yet deployed. Address will be published here after mainnet deployment.
+</Warning>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card
+    title="Tutorial"
+    icon="book"
+    href="/tutorials/shama-token"
+  >
+    Learn how to interact with the SHAMA token
+  </Card>
+  <Card
+    title="Buyback-and-Burn"
+    icon="fire"
+    href="/contracts/buyback-burn"
+  >
+    See how tokens are burned
+  </Card>
+</CardGroup>

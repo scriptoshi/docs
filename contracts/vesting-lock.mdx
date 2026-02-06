@@ -1,0 +1,81 @@
+---
+title: "Vesting/Lock Contract"
+description: "Manages token locks and vesting schedules for team, investors, and operators"
+---
+
+## Overview
+
+The Vesting/Lock Contract manages all token locks across team members, investors, stakers, and shop operators. It supports multiple vesting schedules with cliff periods and linear unlock mechanisms.
+
+## Key Features
+
+- **Multiple Vesting Schedules:** Supports different vesting periods for different beneficiaries
+- **Cliff Periods:** Enforces minimum lock periods before any tokens begin vesting
+- **Conditional Release:** Tokens only vest when associated shops meet payout thresholds
+- **Linear Unlock:** Gradual token release over specified periods
+- **Admin Controls:** Managed by multisig wallet for security
+
+## Vesting Schedules
+
+| Recipient | Cliff | Vesting Period | Condition |
+|-----------|-------|---------------|-----------|
+| Team | 6 months | 12-month linear | Shop must begin payouts |
+| Investors | 6 months | 6-month linear | Shop must begin payouts |
+| Stakers | 3 months | Monthly distribution | Shop must be cash-flow positive |
+| Shop Operator | 6 months | 12-month linear | Performance-based |
+| Treasury | No cliff | Governance-controlled | Proposal + vote required |
+
+## Critical Conditions
+
+<Warning>
+**No tokens vest until the associated shop starts making payouts.** If a shop fails to become profitable, the associated tokens remain locked indefinitely.
+</Warning>
+
+This design aligns everyone's incentives toward making the businesses succeed.
+
+## Functions
+
+### Core Functions
+- `createVestingSchedule()` - Admin function to create new vesting schedule
+- `release()` - Releases vested tokens to beneficiary
+- `getVestingSchedule()` - View vesting schedule details
+- `computeReleasableAmount()` - Calculate currently releasable tokens
+
+### Admin Functions
+- `setShopPayoutStatus()` - Multisig function to activate vesting after shop profitability
+- `revokeVestingSchedule()` - Emergency function to revoke vesting (requires governance)
+
+<Note>
+**Coming Soon:** Detailed technical documentation, contract addresses, and ABIs will be added after contract deployment.
+</Note>
+
+## Security
+
+- Multisig controlled (initially 3-of-5)
+- Time-lock on admin functions
+- Third-party audit pending
+
+## Contract Address
+
+<Warning>
+Contract not yet deployed. Address will be published here after mainnet deployment.
+</Warning>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card
+    title="Tutorial"
+    icon="book"
+    href="/tutorials/vesting-lock"
+  >
+    Learn how to check and claim vested tokens
+  </Card>
+  <Card
+    title="Tokenomics"
+    icon="chart-line"
+    href="/overview/tokenomics"
+  >
+    Learn about token allocation
+  </Card>
+</CardGroup>

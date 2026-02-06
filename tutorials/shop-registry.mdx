@@ -1,0 +1,143 @@
+---
+title: "Shop Registry Tutorial"
+description: "Learn how to query and analyze shop data from the registry"
+---
+
+<Note>
+**Coming Soon:** This tutorial will be available after the Shop Registry Contract is deployed to mainnet.
+</Note>
+
+## What You'll Learn
+
+This tutorial will cover:
+
+- How to query shop information
+- How to view shop performance metrics
+- How to track tokens burned per shop
+- How to filter shops by location or status
+- How to monitor shop operator performance
+- Understanding shop lifecycle and status changes
+
+## Prerequisites
+
+Before starting this tutorial, you'll need:
+
+- Access to a blockchain explorer or Web3 interface
+- Basic understanding of reading contract data
+- Familiarity with the SHAWARMA.TRADE dashboard
+
+## Tutorial Sections
+
+<CardGroup cols={2}>
+  <Card
+    title="Query Shop Data"
+    icon="database"
+  >
+    Retrieve information for specific shops
+  </Card>
+  <Card
+    title="View Performance"
+    icon="chart-mixed"
+  >
+    Analyze revenue and burn metrics
+  </Card>
+  <Card
+    title="Filter by Location"
+    icon="map-location-dot"
+  >
+    Find shops in specific regions
+  </Card>
+  <Card
+    title="Track Operators"
+    icon="user-gear"
+  >
+    Monitor operator performance
+  </Card>
+</CardGroup>
+
+## Shop Data Fields
+
+Each shop in the registry contains:
+
+| Field | Description |
+|-------|-------------|
+| Shop ID | Unique identifier |
+| Location | City and country |
+| Operator Address | Ethereum address of operator |
+| Launch Date | When the shop opened |
+| Status | Pilot, Active, Paused, or Closed |
+| Cumulative Burned | Total SHAMA burned from this shop |
+| Total Revenue | Historical revenue reported |
+
+## Shop Status Types
+
+<Info>
+**Status Meanings:**
+- **Pilot:** One of the first 4 team-operated shops
+- **Active:** Operating shop in good standing
+- **Paused:** Temporarily closed (maintenance, relocation)
+- **Closed:** Permanently closed
+</Info>
+
+## Use Cases
+
+### For Token Holders
+- Monitor which shops are performing best
+- Verify burn contributions from each location
+- Track expansion progress
+- Identify underperforming shops for governance action
+
+### For Operators
+- View your shop's historical performance
+- Compare your metrics to other shops
+- Track your burn contributions
+- Monitor your operator status
+
+### For Researchers
+- Analyze geographic expansion patterns
+- Study revenue trends across locations
+- Evaluate operator effectiveness
+- Research burn rate correlations
+
+## Querying Examples
+
+<CodeGroup>
+
+```javascript JavaScript
+// Coming soon: JavaScript example
+// Get shop information
+const shopInfo = await shopRegistry.getShop(shopId);
+console.log(shopInfo);
+```
+
+```python Python
+# Coming soon: Python example
+# Get all active shops
+active_shops = shop_registry.functions.getActiveShops().call()
+print(active_shops)
+```
+
+</CodeGroup>
+
+## Stay Updated
+
+<Info>
+Join our Discord or follow us on Twitter to be notified when this tutorial is published.
+</Info>
+
+<CardGroup cols={2}>
+  <Card
+    title="Contract Documentation"
+    icon="book"
+    href="/contracts/shop-registry"
+  >
+    Read the technical documentation
+  </Card>
+  <Card
+    title="View Dashboard"
+    icon="monitor"
+    href="https://dashboard.shawarma.trade"
+  >
+    Explore shop data visually
+  </Card>
+</CardGroup>

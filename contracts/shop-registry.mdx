@@ -1,0 +1,104 @@
+---
+title: "Shop Registry Contract"
+description: "Permanent on-chain record of all shops in the network"
+---
+
+## Overview
+
+The Shop Registry Contract maintains a permanent, tamper-proof record of every shop in the SHAWARMA.TRADE network. It serves as the source of truth for shop status, performance, and historical data.
+
+## Key Features
+
+- **Immutable Records:** Permanent on-chain history of all shops
+- **Shop Status Tracking:** Monitor active, paused, and closed shops
+- **Performance Metrics:** Store cumulative revenue and tokens burned per shop
+- **Operator Registry:** Track which operator manages each shop
+- **Location Data:** Store shop location information
+
+## Shop Information Stored
+
+Each shop record contains:
+- **Shop ID:** Unique identifier
+- **Location:** City and country
+- **Operator Address:** Ethereum address of shop operator
+- **Launch Date:** Timestamp of shop opening
+- **Status:** Pilot, Active, Paused, or Closed
+- **Cumulative Tokens Burned:** Total SHAMA burned from this shop
+- **Total Revenue Reported:** Historical revenue data
+
+## Shop Status Types
+
+| Status | Description |
+|--------|-------------|
+| Pilot | One of the first 4 team-operated shops |
+| Active | Operating shop in good standing |
+| Paused | Temporarily closed (maintenance, relocation, etc.) |
+| Closed | Permanently closed |
+
+## Functions
+
+### Core Functions
+- `registerShop()` - Add new shop to registry (multisig only)
+- `updateShopStatus()` - Update shop status (multisig only)
+- `recordRevenue()` - Log monthly revenue (automated from POS)
+- `recordBurn()` - Log tokens burned (automated from Buyback contract)
+
+### View Functions
+- `getShop(uint256 shopId)` - View all shop details
+- `getActiveShops()` - List all active shops
+- `getTotalShops()` - Count of all shops (including closed)
+- `getShopsByOperator(address operator)` - View shops by operator
+- `getTotalBurnedByShop(uint256 shopId)` - Total burned from specific shop
+
+### Query Functions
+- `getShopsByLocation(string country)` - Filter shops by location
+- `getShopPerformance(uint256 shopId)` - View detailed performance metrics
+
+<Note>
+**Coming Soon:** Detailed technical documentation, contract addresses, and ABIs will be added after contract deployment.
+</Note>
+
+## Data Transparency
+
+All shop data in the registry is publicly viewable. This creates complete transparency about:
+- How many shops are operating
+- Where shops are located
+- Which shops are performing well
+- Total tokens burned per shop
+- Historical revenue trends
+
+<Info>
+The Shop Registry provides the data foundation for the public dashboard, allowing anyone to verify the protocol's business performance.
+</Info>
+
+## Security
+
+- Write functions restricted to multisig
+- No delete function (records are permanent)
+- Event emission for all updates
+- Third-party audit pending
+
+## Contract Address
+
+<Warning>
+Contract not yet deployed. Address will be published here after mainnet deployment.
+</Warning>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card
+    title="Tutorial"
+    icon="book"
+    href="/tutorials/shop-registry"
+  >
+    Learn how to query shop data
+  </Card>
+  <Card
+    title="Dashboard"
+    icon="chart-bar"
+    href="https://dashboard.shawarma.trade"
+  >
+    View live shop statistics
+  </Card>
+</CardGroup>

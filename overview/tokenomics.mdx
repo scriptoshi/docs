@@ -1,0 +1,133 @@
+---
+title: "Tokenomics"
+description: "SHAMA token distribution, vesting, and economics"
+---
+
+## The SHAMA Token
+
+| Property | Detail |
+|----------|--------|
+| Name | SHAMA |
+| Total Supply | 1,000,000 (fixed at genesis) |
+| Type | ERC-20 (with burn function) |
+| Inflation | None — supply only decreases |
+| Direct Yield | None — no profit distribution to holders |
+| Value Accrual | Deflationary pressure via buyback-and-burn |
+| Governance | Staked tokens grant voting power |
+| Network | TBD (Ethereum L2 / Solana / Base) |
+
+## What SHAMA Is
+
+A governance and deflationary utility token backed by the revenue mechanics of real physical businesses.
+
+## What SHAMA Is Not
+
+A security, a profit-sharing instrument, or a promise of financial returns. No one is guaranteed anything. The community works together toward making the businesses successful, and the token mechanics reward long-term alignment.
+
+## Total Supply & Allocation Per Shop
+
+Total fixed supply: **1,000,000 SHAMA**
+
+Tokens are released in tranches tied to each shop setup. Not all tokens are in circulation at launch — they unlock as the business expands.
+
+### Pilot Phase (Shops 1–4): 10,000 tokens per shop
+
+| Allocation | Percentage | Tokens |
+|------------|-----------|--------|
+| Team | 40% | 4,000 |
+| Stakers | 30% | 3,000 |
+| Investors | 30% | 3,000 |
+| **Total per shop** | **100%** | **10,000** |
+
+<Info>
+The 40% team allocation during the pilot phase reflects the disproportionate effort required to build the franchise model from scratch.
+</Info>
+
+### Growth Phase (Shops 5–50): 20,000 tokens per shop
+
+| Allocation | Percentage | Tokens |
+|------------|-----------|--------|
+| Team | 20% | 4,000 |
+| Stakers | 25% | 5,000 |
+| Investors | 25% | 5,000 |
+| Shop Operator | 15% | 3,000 |
+| Treasury / Reserve | 10% | 2,000 |
+| Liquidity | 5% | 1,000 |
+| **Total per shop** | **100%** | **20,000** |
+
+## Supply Math
+
+| Phase | Shops | Tokens/Shop | Subtotal |
+|-------|-------|-------------|----------|
+| Pilot | 4 | 10,000 | 40,000 |
+| Growth | 46 | 20,000 | 920,000 |
+| **Total allocated** | **50** | — | **960,000** |
+| Ecosystem reserve | — | — | 40,000 |
+| **Grand total** | — | — | **1,000,000** |
+
+The remaining 40,000 tokens in the ecosystem reserve are held for: emergency liquidity needs, strategic partnerships, exchange listings, and unforeseen operational requirements. Usage requires governance approval.
+
+## Vesting Schedule
+
+All token allocations are subject to vesting. No one receives unlocked tokens at shop launch.
+
+| Recipient | Cliff | Vesting Period | Condition |
+|-----------|-------|---------------|-----------|
+| Team | 6 months | 12-month linear | Shop must begin payouts |
+| Investors | 6 months | 6-month linear | Shop must begin payouts |
+| Stakers | 3 months | Monthly distribution | Shop must be cash-flow positive |
+| Shop Operator | 6 months | 12-month linear | Performance-based |
+| Treasury | No cliff | Governance-controlled | Proposal + vote required |
+
+<Warning>
+**Critical condition:** No tokens vest until the associated shop starts making payouts. If a shop fails to become profitable, the associated tokens remain locked.
+</Warning>
+
+## Staking Model
+
+### Purpose
+
+Staking serves two functions:
+1. Provides governance weight (staked tokens = voting power)
+2. Mechanism through which community members earn SHAMA from new shop launches
+
+### Staking Tiers
+
+| Tier | Lock Duration | Reward Multiplier | Governance Weight |
+|------|-------------|-------------------|-------------------|
+| Flexible | No lock | 1.0x | 1.0x |
+| Bronze | 3 months | 1.25x | 1.25x |
+| Silver | 6 months | 1.5x | 1.5x |
+| Gold | 12 months | 2.0x | 2.0x |
+
+Longer locks receive higher reward multipliers and greater voting weight. This rewards commitment and prevents governance attacks from short-term speculators.
+
+## The Elegant Tension
+
+The tokenomics create a natural balance:
+- **Expansion emits tokens** (inflationary pressure from new shop allocations)
+- **Operating shops burn tokens** (deflationary pressure from buyback-and-burn)
+- **At scale**, burn rate exceeds emission rate, and the token becomes net deflationary
+
+<Info>
+This crossover point — where active shops are burning more tokens than new shops are emitting — is when the flywheel fully engages.
+</Info>
+
+## Learn More
+
+<CardGroup cols={2}>
+  <Card
+    title="Vesting/Lock Contract"
+    icon="lock"
+    href="/contracts/vesting-lock"
+  >
+    Technical documentation for vesting
+  </Card>
+  <Card
+    title="Staking Contract"
+    icon="layer-group"
+    href="/contracts/staking"
+  >
+    Technical documentation for staking
+  </Card>
+</CardGroup>

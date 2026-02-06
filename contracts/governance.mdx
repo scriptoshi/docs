@@ -1,0 +1,129 @@
+---
+title: "Governance Contract"
+description: "On-chain proposal and voting system for strategic decisions"
+---
+
+## Overview
+
+The Governance Contract enables SHAMA token holders to function as a decentralized board of directors. It handles proposal submission, voting, and execution of approved governance actions.
+
+## Key Features
+
+- **On-Chain Proposals:** Transparent proposal submission and tracking
+- **Weighted Voting:** Voting power based on staked amount and lock duration
+- **Quorum Requirements:** Minimum participation for valid votes
+- **Timelock Execution:** Security delay on approved proposals
+- **Emergency Proposals:** Fast-track process for urgent situations
+
+## What Governance Controls
+
+### Strategic Decisions (Require Vote)
+- Approval of new shop locations
+- Selection of shop operators
+- Major budget allocations
+- Changes to franchise fee structure
+- Adjustments to buyback-and-burn percentage
+- Removal of underperforming operators
+- Changes to staking parameters
+- Use of treasury/reserve funds
+- Partnership and listing decisions
+
+### Operational Decisions (NOT Voted On)
+<Warning>
+These are handled by operators, NOT voted on by governance:
+- Daily staffing and scheduling
+- Ingredient sourcing and menu execution
+- Customer service
+- Local marketing and promotions
+- Equipment maintenance
+- Health and safety compliance
+</Warning>
+
+## Proposal Process
+
+<Steps>
+  <Step title="Submission">
+    Any staker holding ≥ 0.1% of staked supply can submit a proposal
+  </Step>
+  <Step title="Discussion Period">
+    7 days for community discussion and debate
+  </Step>
+  <Step title="Voting Period">
+    5 days for on-chain voting. Quorum requirement: 20% of staked supply must participate
+  </Step>
+  <Step title="Execution">
+    Approved proposals are executed by the operations team within 30 days
+  </Step>
+</Steps>
+
+## Emergency Proposals
+
+In urgent situations (equipment failure, safety issues), the team can:
+1. Act immediately to resolve the issue
+2. Submit a retroactive ratification vote within 48 hours
+3. Community votes to approve or reject the emergency action
+
+## Voting Power
+
+```
+Voting Power = (Staked SHAMA Amount) × (Tier Multiplier)
+```
+
+**Example:**
+- User with 1,000 SHAMA in Gold tier (12-month lock) = 2,000 voting power
+- User with 1,000 SHAMA in Flexible tier = 1,000 voting power
+
+This rewards commitment and prevents governance attacks from short-term speculators.
+
+## Functions
+
+### Core Functions
+- `propose()` - Submit a new proposal
+- `vote(uint256 proposalId, bool support)` - Cast a vote
+- `execute(uint256 proposalId)` - Execute approved proposal (after timelock)
+- `cancel(uint256 proposalId)` - Cancel proposal (proposer only)
+
+### View Functions
+- `getProposal(uint256 proposalId)` - View proposal details
+- `getVotes(address voter)` - Check voting power
+- `getProposalState(uint256 proposalId)` - Check proposal status
+
+### Admin Functions
+- `setQuorum(uint256 newQuorum)` - Adjust quorum requirement (requires governance vote)
+- `setVotingPeriod(uint256 period)` - Adjust voting duration (requires governance vote)
+
+<Note>
+**Coming Soon:** Detailed technical documentation, contract addresses, and ABIs will be added after contract deployment.
+</Note>
+
+## Security
+
+- Timelock on execution (48-hour delay)
+- Quorum requirements prevent low-participation attacks
+- Proposer threshold prevents spam
+- Third-party audit pending
+
+## Contract Address
+
+<Warning>
+Contract not yet deployed. Address will be published here after mainnet deployment.
+</Warning>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card
+    title="Tutorial"
+    icon="book"
+    href="/tutorials/governance"
+  >
+    Learn how to create and vote on proposals
+  </Card>
+  <Card
+    title="Governance Portal"
+    icon="vote-yea"
+    href="https://governance.shawarma.trade"
+  >
+    View active proposals
+  </Card>
+</CardGroup>

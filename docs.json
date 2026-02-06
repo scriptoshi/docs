@@ -1,68 +1,57 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "SHAWARMA.TRADE",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#FF6B35",
+    "light": "#FFA07A",
+    "dark": "#D64520"
   },
   "favicon": "/favicon.svg",
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Introduction",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Overview",
             "pages": [
               "index",
-              "quickstart",
-              "development"
-            ]
-          },
-          {
-            "group": "Customization",
-            "pages": [
-              "essentials/settings",
-              "essentials/navigation"
-            ]
-          },
-          {
-            "group": "Writing content",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "AI tools",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "overview/what-is-shawarma",
+              "overview/how-it-works",
+              "overview/tokenomics"
             ]
           }
         ]
       },
       {
-        "tab": "API reference",
+        "tab": "Smart Contracts",
         "groups": [
           {
-            "group": "API documentation",
+            "group": "Core Contracts",
             "pages": [
-              "api-reference/introduction"
+              "contracts/shama-token",
+              "contracts/vesting-lock",
+              "contracts/staking",
+              "contracts/buyback-burn",
+              "contracts/governance",
+              "contracts/shop-registry"
             ]
-          },
+          }
+        ]
+      },
+      {
+        "tab": "Tutorials",
+        "groups": [
           {
-            "group": "Endpoint examples",
+            "group": "Contract Guides",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "tutorials/shama-token",
+              "tutorials/vesting-lock",
+              "tutorials/staking",
+              "tutorials/buyback-burn",
+              "tutorials/governance",
+              "tutorials/shop-registry"
             ]
           }
         ]
@@ -71,14 +60,19 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
+          "anchor": "Whitepaper",
+          "href": "https://shawarma.trade",
           "icon": "book-open-cover"
         },
         {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "Twitter",
+          "href": "https://twitter.com/shawarmatrade",
+          "icon": "twitter"
+        },
+        {
+          "anchor": "Discord",
+          "href": "https://discord.gg/shawarmatrade",
+          "icon": "discord"
         }
       ]
     }
@@ -90,14 +84,14 @@
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "label": "Dashboard",
+        "href": "https://dashboard.shawarma.trade"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Governance Portal",
+      "href": "https://governance.shawarma.trade"
     }
   },
   "contextual": {
@@ -114,9 +108,10 @@
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "x": "https://twitter.com/shawarmatrade",
+      "github": "https://github.com/shawarmatrade",
+      "discord": "https://discord.gg/shawarmatrade",
+      "telegram": "https://t.me/shawarmatrade"
     }
   }
 }

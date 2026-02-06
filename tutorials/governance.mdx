@@ -1,0 +1,141 @@
+---
+title: "Governance Tutorial"
+description: "Learn how to create proposals and vote on governance decisions"
+---
+
+<Note>
+**Coming Soon:** This tutorial will be available after the Governance Contract is deployed to mainnet.
+</Note>
+
+## What You'll Learn
+
+This tutorial will cover:
+
+- How to create a governance proposal
+- How to vote on active proposals
+- Understanding voting power and quorum
+- Best practices for proposal writing
+- Participating in discussion periods
+- Tracking proposal execution
+
+## Prerequisites
+
+Before starting this tutorial, you'll need:
+
+- Staked SHAMA tokens (for voting power)
+- At least 0.1% of staked supply to submit proposals
+- Understanding of governance scope and limitations
+- Network gas tokens for transaction fees
+
+## Tutorial Sections
+
+<CardGroup cols={2}>
+  <Card
+    title="View Active Proposals"
+    icon="list"
+  >
+    Browse current governance proposals
+  </Card>
+  <Card
+    title="Vote on Proposals"
+    icon="check-to-slot"
+  >
+    Cast your vote on active proposals
+  </Card>
+  <Card
+    title="Create Proposal"
+    icon="pen-to-square"
+  >
+    Submit a new governance proposal
+  </Card>
+  <Card
+    title="Track Execution"
+    icon="hourglass"
+  >
+    Monitor approved proposal implementation
+  </Card>
+</CardGroup>
+
+## What You Can Vote On
+
+### Strategic Decisions ✅
+- New shop locations
+- Shop operator selection
+- Major budget allocations
+- Buyback-and-burn percentage adjustments
+- Treasury fund usage
+- Protocol parameter changes
+
+### Operational Decisions ❌
+<Warning>
+These are NOT voted on (handled by operators):
+- Daily staffing
+- Ingredient sourcing
+- Menu execution
+- Customer service
+- Equipment maintenance
+</Warning>
+
+## Proposal Lifecycle
+
+<Steps>
+  <Step title="Submission">
+    Proposal submitted on-chain (requires 0.1% of staked supply)
+  </Step>
+  <Step title="Discussion (7 days)">
+    Community discusses and debates on Discord/forum
+  </Step>
+  <Step title="Voting (5 days)">
+    On-chain voting period with 20% quorum requirement
+  </Step>
+  <Step title="Timelock (48 hours)">
+    Security delay before execution
+  </Step>
+  <Step title="Execution (30 days)">
+    Operations team implements approved proposal
+  </Step>
+</Steps>
+
+## Voting Power Calculation
+
+```
+Your Voting Power = (Staked SHAMA) × (Tier Multiplier)
+```
+
+**Example:**
+- 1,000 SHAMA in Flexible tier = 1,000 voting power
+- 1,000 SHAMA in Gold tier (12mo lock) = 2,000 voting power
+
+## Best Practices
+
+<Tip>
+**Writing Good Proposals:**
+1. Be specific and clear about what you're proposing
+2. Include rationale and expected outcomes
+3. Provide cost estimates if applicable
+4. Consider community feedback before formal submission
+5. Include success metrics for evaluation
+</Tip>
+
+## Stay Updated
+
+<Info>
+Join our Discord or follow us on Twitter to be notified when this tutorial is published.
+</Info>
+
+<CardGroup cols={2}>
+  <Card
+    title="Contract Documentation"
+    icon="book"
+    href="/contracts/governance"
+  >
+    Read the technical documentation
+  </Card>
+  <Card
+    title="Governance Portal"
+    icon="landmark"
+    href="https://governance.shawarma.trade"
+  >
+    Participate in governance
+  </Card>
+</CardGroup>

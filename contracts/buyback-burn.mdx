@@ -1,0 +1,107 @@
+---
+title: "Buyback-and-Burn Contract"
+description: "Executes market buys and permanent token burns from shop profits"
+---
+
+## Overview
+
+The Buyback-and-Burn Contract is the core value engine of the protocol. It receives funds from shop operations, executes market buys of SHAMA on DEXs, and permanently burns all purchased tokens.
+
+## Key Features
+
+- **Automated Buybacks:** Executes market buys on designated DEX
+- **Permanent Burns:** All purchased tokens are sent to burn address
+- **Full Transparency:** Every buy and burn is recorded on-chain
+- **TWAP Execution:** Time-weighted average pricing to minimize market impact
+- **Public Tracking:** All transactions visible on dashboard
+
+## How It Works
+
+1. Shop's net profit is calculated monthly (revenue minus operating costs)
+2. Designated percentage of profit (initially 50%, adjustable by governance) is converted to on-chain currency
+3. Funds are sent to the Buyback-and-Burn contract
+4. Contract executes market buys on the designated DEX
+5. All purchased tokens are sent to burn address (`0x000...dead`)
+6. Transaction is recorded on-chain with full details
+
+## Burn Transparency
+
+Every burn event is published with:
+- Shop identifier
+- Revenue for the period
+- Operating costs for the period
+- Net profit calculation
+- Percentage allocated to burn
+- DEX transaction hash for the buy
+- Burn transaction hash
+- Running total of tokens burned to date
+
+<Info>
+This data is displayed on the public dashboard and is independently verifiable on-chain.
+</Info>
+
+## Functions
+
+### Core Functions
+- `executeBuyback()` - Executes market buy and burn (multisig or automated)
+- `setBurnPercentage(uint256 percentage)` - Adjust burn allocation (governance controlled)
+- `setDEX(address dexRouter)` - Update DEX router (governance controlled)
+
+### View Functions
+- `getTotalBurned()` - Total tokens burned to date
+- `getBurnHistory()` - View burn transaction history
+- `getNextBurnEstimate()` - Estimate next burn amount based on current profits
+
+### Emergency Functions
+- `pause()` - Pause buybacks (multisig controlled)
+- `withdrawFunds()` - Emergency withdrawal (requires governance vote)
+
+<Note>
+**Coming Soon:** Detailed technical documentation, contract addresses, and ABIs will be added after contract deployment.
+</Note>
+
+## Burn Impact Projections
+
+<Warning>
+These are illustrative estimates, not guarantees. Actual figures depend on shop performance, location, and market conditions.
+</Warning>
+
+| Scenario | Shops Active | Avg Monthly Profit/Shop | Burn Allocation (50%) | Monthly Buy Pressure |
+|----------|-------------|------------------------|----------------------|---------------------|
+| Early (Year 1) | 4 | $3,000 | $1,500 | $6,000 |
+| Growth (Year 2) | 15 | $4,000 | $2,000 | $30,000 |
+| Scale (Year 3) | 40 | $5,000 | $2,500 | $100,000 |
+
+The key insight: **burn pressure compounds.** Each new profitable shop adds permanent, recurring buy pressure.
+
+## Security
+
+- Multisig controlled execution
+- Rate limiting on buybacks
+- Maximum slippage protection
+- Third-party audit pending
+
+## Contract Address
+
+<Warning>
+Contract not yet deployed. Address will be published here after mainnet deployment.
+</Warning>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card
+    title="Tutorial"
+    icon="book"
+    href="/tutorials/buyback-burn"
+  >
+    Learn how to monitor buyback-and-burn
+  </Card>
+  <Card
+    title="Dashboard"
+    icon="chart-line"
+    href="https://dashboard.shawarma.trade"
+  >
+    View live burn statistics
+  </Card>
+</CardGroup>

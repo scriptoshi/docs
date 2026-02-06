@@ -1,97 +1,147 @@
 ---
-title: "Introduction"
-description: "Welcome to the new home for your documentation"
+title: "Welcome to SHAWARMA.TRADE"
+description: "Decentralized Autonomous Business Protocol - Real businesses. Real revenue. Daily Burns."
 ---
 
-## Setting up
+## What is SHAWARMA.TRADE?
 
-Get your documentation site up and running in minutes.
+SHAWARMA.TRADE is a Decentralized Autonomous Business (DAB) protocol that bridges blockchain governance with real-world fast food operations. We build and operate physical shawarma shops, with token holders serving as a decentralized board of directors.
+
+**Every shawarma sold burns a token.**
 
 <Card
-  title="Start here"
-  icon="rocket"
-  href="/quickstart"
+  title="Read the Whitepaper"
+  icon="book"
+  href="https://shawarma.trade"
   horizontal
 >
-  Follow our three step quickstart guide.
+  Learn about the vision, tokenomics, and roadmap
 </Card>
 
-## Make it yours
-
-Design a docs site that looks great and empowers your users.
+## Core Principles
 
 <Columns cols={2}>
   <Card
-    title="Edit locally"
-    icon="pen-to-square"
-    href="/development"
+    title="Real Revenue"
+    icon="sack-dollar"
   >
-    Edit your docs locally and preview them in real time.
+    Every shop generates real income from real customers buying real food. This isn't yield farming - it's commerce.
   </Card>
   <Card
-    title="Customize your site"
-    icon="palette"
-    href="/essentials/settings"
+    title="Transparent Operations"
+    icon="eye"
   >
-    Customize the design and colors of your site to match your brand.
-  </Card>
-    <Card
-    title="Set up navigation"
-    icon="map"
-    href="/essentials/navigation"
-  >
-    Organize your docs to help users find what they need and succeed with your product.
+    Livestreams from every shop, on-chain sales dashboards, and public financial reporting. Token holders see everything.
   </Card>
   <Card
-    title="API documentation"
-    icon="terminal"
-    href="/api-reference/introduction"
+    title="Deflationary Mechanics"
+    icon="fire"
   >
-    Auto-generate API documentation from OpenAPI specifications.
+    Shop profits buy and burn tokens. More shops = more burn. The token supply only goes down over time.
+  </Card>
+  <Card
+    title="Community Governance"
+    icon="users"
+  >
+    Token holders act as a board of directors, making high-level strategic decisions while professional operators handle daily execution.
   </Card>
 </Columns>
 
-## Create beautiful pages
+## The SHAMA Token
 
-Everything you need to create world-class documentation.
+| Property | Detail |
+|----------|--------|
+| Name | SHAMA |
+| Total Supply | 1,000,000 (fixed at genesis) |
+| Type | ERC-20 (with burn function) |
+| Inflation | None — supply only decreases |
+| Value Accrual | Deflationary pressure via buyback-and-burn |
+| Governance | Staked tokens grant voting power |
 
-<Columns cols={2}>
+## Smart Contract Architecture
+
+The protocol consists of six core smart contracts:
+
+<CardGroup cols={2}>
   <Card
-    title="Write with MDX"
-    icon="pen-fancy"
-    href="/essentials/markdown"
+    title="SHAMA Token Contract"
+    icon="coin"
+    href="/contracts/shama-token"
   >
-    Use MDX to style your docs pages.
+    Standard ERC-20 with burn function and fixed supply
   </Card>
   <Card
-    title="Code samples"
-    icon="code"
-    href="/essentials/code"
+    title="Vesting/Lock Contract"
+    icon="lock"
+    href="/contracts/vesting-lock"
   >
-    Add sample code to demonstrate how to use your product.
+    Manages token locks and vesting schedules
   </Card>
   <Card
-    title="Images"
-    icon="image"
-    href="/essentials/images"
+    title="Staking Contract"
+    icon="layer-group"
+    href="/contracts/staking"
   >
-    Display images and other media.
+    Handles token staking and governance weight
   </Card>
   <Card
-    title="Reusable snippets"
-    icon="recycle"
-    href="/essentials/reusable-snippets"
+    title="Buyback-and-Burn Contract"
+    icon="fire-flame-curved"
+    href="/contracts/buyback-burn"
   >
-    Write once and reuse across your docs.
+    Executes market buys and permanent token burns
   </Card>
-</Columns>
+  <Card
+    title="Governance Contract"
+    icon="scale-balanced"
+    href="/contracts/governance"
+  >
+    On-chain proposal and voting system
+  </Card>
+  <Card
+    title="Shop Registry Contract"
+    icon="shop"
+    href="/contracts/shop-registry"
+  >
+    Permanent record of all shops in the network
+  </Card>
+</CardGroup>
 
-## Need inspiration?
+## Get Started
 
-<Card
-  title="See complete examples"
-  icon="stars"
-  href="https://mintlify.com/customers"
->
-  Browse our showcase of exceptional documentation sites.
-</Card>
+<Steps>
+  <Step title="Understand the Protocol">
+    Learn about how SHAWARMA.TRADE works and the tokenomics model
+
+    [What is SHAWARMA.TRADE?](/overview/what-is-shawarma)
+  </Step>
+  <Step title="Explore Smart Contracts">
+    Dive into the technical documentation for each contract
+
+    [Smart Contracts](/contracts/shama-token)
+  </Step>
+  <Step title="Follow Tutorials">
+    Learn how to interact with the protocol (Coming Soon)
+
+    [Tutorials](/tutorials/shama-token)
+  </Step>
+</Steps>
+
+## Need Help?
+
+<CardGroup cols={2}>
+  <Card
+    title="Join Discord"
+    icon="discord"
+    href="https://discord.gg/shawarmatrade"
+  >
+    Connect with the community
+  </Card>
+  <Card
+    title="Follow on Twitter"
+    icon="twitter"
+    href="https://twitter.com/shawarmatrade"
+  >
+    Stay updated with the latest news
+  </Card>
+</CardGroup>
